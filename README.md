@@ -27,6 +27,10 @@ the way it works is pretty simple to use the study guide just review the notes i
 pressing Command+Option+I (MacOS) or Control+Shift+I(Windows). A console panel should open either below or to the side of the webpage in the browser. 
 There you will see a list of topics we learned from Prework along the a suggestion on which topic to study first.
 
+## Link
+
+[Pre-work!](https://oliverlo78.github.io/prework-study-guide/)
+
 ## Credits
 
 N/A
