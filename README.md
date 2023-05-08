@@ -1,4 +1,10 @@
 # prework-study-guide 
+
+## Screenshot
+
+![bootcampPSG](https://user-images.githubusercontent.com/109435666/236710280-5c7f6a0a-d6de-4733-aadc-25747c018d60.png)
+
+
 A study guide for course pre-work
 
 -The motivation for the study guide is to have notes that boot camp students can refer to online on the topics covered in the coding bootcamp.
