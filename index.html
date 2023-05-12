@@ -9,15 +9,18 @@
   </head>
   <body>
     <header id="top">
-      <h1">Prework Study Guide</h1>
-      <img src="./assets/bowtie-cat.png" alt="Profile image of cat wearing a bow tie."/>
-      <h2>✨ Open the Console to See What's Happening ✨</h2>
+      <h1>Prework Study Guide</h1>
+      <img src="./assets/bowtie-cat.png" alt="Profile image of cat wearing a bow tie." class="cat"/>
+      <h1>✨ Open the Console to See What's Happening ✨</h1>
+      <ul>
+        <a href="./programming.html">OOP Notes</a>
+      </ul>
     </header>
     <main>
       
-      <section class="card" id="html-section">
+      <section class="card">
       <h2>HTML</h2>
-      <ul>
+      <ul class="item">
         <li>!DOCTYPE - is not case-sensitive because it is a declaration. Declarations are not case-sensitive; HTML elements are case sensitive</li>
         <li>html - attributes are always defined in the beginning element, lang = "en" tells language for the webpage</li>
         <li>meta tag - defines metadata about an HTML document, meta tags go inside the head element</li>
@@ -27,31 +30,29 @@
         <li>charset - elements sets our character encoding</li> <li>http-equiv - elements sets an HTTP header for content</li> <li>viewport - element sets the default view for our webpage</li>
         <li>title - of the webpage is defined is the one exception is that we should be able to see if we open index.html to look at browser's title</li>
         <li>Body - element represents the visible content shown to the user.</li>
-        
       </ul>
       </section>
 
-      <section class="card" id="css-section">
+      <section class="card">
       <h2>CSS</h2>
-      <ul>
-        <li>A margin indicates how much space we want around the outside of an element</li>
-        <li>A padding indicates how muich space we want around the content inside an element</li>
-        <li>* selector card symbol to declare all elements on the page</li>
-        <li>touch style.css create a file that will contain your css style</li>
+      <ul class="item">
+        <li>A <u>margin</u> indicates how much space we want around the outside of an element</li>
+        <li>A <u>padding</u> indicates how muich space we want around the content inside an element</li>
+        <li><span>*</span> selector card symbol to declare all elements on the page</li>
+        <li><u>touch style.css</u> create a file that will contain your css style</li>
         <li>CSS box model every html element is essentially a box</li>
-        <li>header, footer selectors combined two selectors into a single CSS rule with a comma, allowing the declarations to affect both</li>
-        <li>h1, h2 rule assignment is a positioning property text-align and lets us style our h1 and h2 heading text</li>
-        <li>img selector assigns property values to any image element in the markup. The display property is assigned with the block value</li>
-        <li>ul element declares the font to be 20px and the padding on the left of ul list to be 40px</li>
-        <li>p text to be centered on the page with a font size of 30px</li>
-        <li>link element create the connection to the external file ->link rel="stylesheet"< href="./assets/style.css"</li>
-        <li>. card box shadow CSS property adds shadow effects around an elements' frame</li>
+        <li><u>header, footer</u> selectors combined two selectors into a single CSS rule with a comma, allowing the declarations to affect both</li>
+        <li><u> h1, h2</u>  rule assignment is a positioning property <u>text-align</u> and lets us style our h1 and h2 heading text</li>
+        <li><u>img </u> selector assigns property values to any image element in the markup. The display property is assigned with the block value</li>
+        <li> <span>ul</span> unordered list element declares the font to be <u>20px</u> and the padding on the left of ul list to be <u>40px</u> </li>
+        <li> <span>p</span> paragraph to be centered on the page with a font size of <u>30px</u></li>
+        <li>link element create the connection to the external file</li>  ->link rel="stylesheet" href="./assets/style.css"</li>
       </ul>
       </section>
 
-      <section class="card" id="git-section">
+      <section class="card">
       <h2>GIT</h2>
-      <ul>
+      <ul class="item">
         <li>git revert a8a3...___insert SHA version to go back to fix a problem</li>
         <li>git status; checks what branch we are currently on</li>
         <li>1.git add -A command to stage your changes to commit all files in the working branch</li>
@@ -65,23 +66,34 @@
       </ul>
       </section>
 
-      <section class="card" id="javascript-section">
+      <section class="card">
       <h2>JavaScript</h2>
-      <ul>
+      <ul class="item">
         <li>A variable is a named container that allows us to store data in our code.</li>
         <li>Control flow is the order in which a computer executes code in a script TOP/BOTTOM</li>
-        <li>in javaScript to declare a variable we use the var keyword, ex. var shape = "circle";</li>
-        <li>var topics = "HTML, CSS, Git, JavaScript"; all strings are surrounded by quotations marks ends with semicolon</li>
-        <li>console.log(topics) will output the value of topics by adding argument, use to test your code</li>
-        <li>to link js file to the html file use script src="./assets/scripts.js"></script></li>
+        <li>in javaScript to declare a variable we use the var keyword,</li>
+          ex. var shape = "circle";<br>
+        <li>var topics = "HTML, CSS, Git, JavaScript";</li> all strings are surrounded by quotations marks ends with semicolon</li>
+        <li>console.log(topics) <br> will output the value of topics by adding argument, use to test your code</li>
+        <li>to link js file to the html file use script tag</li> src="./assets/scripts.js"><br>
         <li>an if statement in a JavaScript file will check if the condition that we have is truthy/falsy</li>
-        <li>if (0) { console.log("I'm 0!") } else if(null) { console.log("I'm null!") } else if (true){ console.log("I'm true!") } }</li>
-        <li>the strict equality operator(===) checks to see if two values are equal: returns true if values are equal or false if not equal</li>
-        <li>to create array us var shapes = ["triangle", "square", "pentagon", "circle"];</li>
-        <li>a single array can store different data types, ex. var studentInfo = ["Luu", 54, true];</li>
+        <li>if (0) { <br>
+          console.log("I'm 0!") <br>
+         } else if(null) { <br>
+          console.log("I'm null!") <br>
+         } else if (true) { <br>
+          console.log("I'm true!") <br>
+        } <br>
+      } <br></li>
+        <li>the strict equality operator(===) </li>checks to see if two values are equal: returns true if values are equal or false if not equal</li>
+        <li>to create array </li> var shapes = ["triangle", "square", "pentagon", "circle"];
+        <li>a single array can store different data types, ex.</li>  var studentInfo = ["Luu", 54, true];
         <li>each item is assigned an index according to the order in which it is stored in array: 0, 1, 2, 3...</li>
-        <li>to access data in the array start with the name of the variable that stores the array shapes[0]: console.log(shapes[0]);</li>
-        <li>for loops to operate on each element in an array for(var x =0; x < shapes.length; x++) { console.log(shapes[x]) }</li>
+        <li>to access data in the array start with the name of the variable that stores the array shapes[0]: </li> console.log(shapes[0]);</li>
+        <li>for loops to operate on each element in an array </li> 
+         for(var x =0; x < shapes.length; x++) { <br> 
+          console.log(shapes[x])  <br>
+          }</li>
       </ul>
       </section>
 
