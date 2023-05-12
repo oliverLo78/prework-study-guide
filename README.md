@@ -1,4 +1,10 @@
 # prework-study-guide 
+
+## Screenshot
+
+![bootcampPSG](https://user-images.githubusercontent.com/109435666/236710280-5c7f6a0a-d6de-4733-aadc-25747c018d60.png)
+
+
 A study guide for course pre-work
 
 -The motivation for the study guide is to have notes that boot camp students can refer to online on the topics covered in the coding bootcamp.
@@ -26,6 +32,10 @@ N/A
 the way it works is pretty simple to use the study guide just review the notes in each section. For suggestion on what to study first, open the Chrome DevTools by
 pressing Command+Option+I (MacOS) or Control+Shift+I(Windows). A console panel should open either below or to the side of the webpage in the browser. 
 There you will see a list of topics we learned from Prework along the a suggestion on which topic to study first.
+
+## Link
+
+[Pre-work!](https://oliverlo78.github.io/prework-study-guide/)
 
 ## Credits
 
