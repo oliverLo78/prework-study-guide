@@ -25,6 +25,17 @@
             <p>1. Encapsulation - is a concept of hiding data by wrapping up members into a single unit such as a
                 Class. It provides security to data members by making the variable private, and then 
                 creating public getter/setter methods to access those variables.</p>
+                <p>const OverloadDemo = function () { <br>
+                    this.area = function (x, y) { <br>
+                      console.log('x = ', x); <br>
+                      if (!y) { <br>
+                        console.log('y is not provided'); <br>
+                        return `\nThe area of the square is ${Math.pow(x, 2)} sq units`; <br>
+                      }
+                      console.log('y = ', y); <br>
+                      return `\nThe area of the rectangle is ${x * y} sq units`; <br>
+                    }; <br>
+                  };</p>
             <ul class="card">
                 <li>Getters & Setters - The get method returns the variable value, and the set method sets the value.
                 Syntax for both is that they start with either get or set, followed by the name of the variable, with the first letter in upper case:</li>
@@ -83,16 +94,24 @@
                 <li>Abstract Methods - a method that is declared, but not implemented in the code. Abstract classes and methods are when the parent class has a named method, but need its child class(es) to fill out the tasks </li>
                 <li>Constructors - is a special type of function called to create an object. It prepares the new object for use, often accepting arguments</li>
                 <li>Default Constructors - If the programmer does not supply a constructor for an instantiable class, Java compiler inserts a default constructor into your code on your behalf.</li> 
-                    <p class="item">#include <iostream>
-
-                        class Student {
-                         public:
-                          Student(int a = 0, int b = 0);  // Default constructor. <br>
+                    <p class="item">// Create a constructor function called 'Developer' that takes in 'name' and 'tech' <br>
+                        function Developer(name, tech) { <br>
+                            this.name = name; <br>
+                            this.tech = tech;
+                            // Include a method called 'introduction()' that introduces the Developer with their name and favorite tech <br>
+                            this.introduction = () => { <br>
+                                console.log(`Hi, my name is ${this.name} and I love ${this.tech}!`); <br>
+                            }; <br>
+                        }
+                        // Create a new object using the 'Developer' constructor <br>
+                        const oliver = new Developer('Oliver', 'OOP'); <br>
+                        const norberto = new Developer('Norberto', 'Javascript'); <br>
+                        const osiris = new Developer('Osiris', 'Python'); <br>
                         
-                          int a;
-                          int b;
-                        };
-                    </p>
+                        // Call the 'introduction()' method on the new object <br>
+                        oliver.introduction(); <br>
+                        norberto.introduction(); <br>
+                        oriris.introduction();</p>
 
             </ul>
         </section>
@@ -103,6 +122,21 @@
                 <li>Method Overriding -a language feature that allows a subclass or child class to provide a specific implementation of a method that is already provided by one of its superclasses or parent classes.</li>
                 <img src="./assets/images/Method_Overriding.jpg" alt="class vehicle model u-shape line connecting class car box">
                 <li>Method Overloading -  is a form of polymorphism in OOP. Polymorphism allows objects or methods to act in different ways, according to the means in which they are used. </li>
+                    <p class="tab">const MethodOverloading = function () { <br>
+                        this.area = function (side1, side2, side3) { <br>
+                        console.log('side1 = ', side1); <br>
+                        console.log('side2 = ', side2); <br>
+                        if (!side3) { <br>
+                          console.log('side3 of the triangle is not provided'); <br>
+                          return `\nThe area of the triangle is ${Math.sqrt(side1*side1 + side2*side2)} sq units`; <br>
+                        } <br>
+                        const s = (side1 + side2 + side3) / 2; <br>
+                        console.log('s = ', s); <br>
+                        return `\nThe area of the triangle is ${ Math.sqrt(s * (s - side1) * (s - side2) * (s - side3))}sq units`; <br>
+                      <p class="tab">}; </p> <br>
+                    };</p>
+                
+                
                 <li>Runtime vs Compile-time - Compile time is the period when the programming code (such as C#, Java, C, Python) is converted to the machine code (i.e. binary code). Runtime is the period of time when a program is running and generally occurs after compile time.</li>
                 <img src="./assets/images/compile time v run time.png"alt="Big circle object with a Smaller circle Paper class inside">
                 <li>Covariance vs Contravariance -Frequently it seems like it would be nice if when a method is overridden we could change the argument types or return types. A change that moves down the inheritance hierarchy, making it more specific, is said to be covariant. A change that moves up the inheritance hierarchy is said to be contravariant.</li>
@@ -160,10 +194,16 @@
         </section>
         
         <section>
-            <p>Data Structures</p>
+            <p>Data Structure</p>
+            <ol>
+                <li>A way of storing data so that it can be used efficiently by the computer or browser.</li>
+                <li>It is built upon simpler primitive data types (like variables).</li>
+                <li>It is non-opinionated, in the sense that it is only responsible for holding the data. </li>
+            </ol>
             <ul>
                 <li>ARRAYS - a linear data structure that collects elements of the same data type and stores them in contiguous and adjacent memory location</li>
                 <img src="./assets/images/array.png" alt="array data structure rectangular five empty boxes">
+                <li>var favFoods = ["Pickles", "Onions", "Carrots"]</li>
                 <li>ARRAYLIST - resizable array data structure that implements the List interface</li>
                 <li>LINKEDLIST -  is a dynamic data structure, which means that the size of the list can change at run time.</li>
                 <img src="./assets/images/isaac_cs_dsa_data_struct_linked_list_head_tail.png" alt="pair of boxes linked by arrows with head at the start of first value and tail on the last value if empty value is null">
@@ -171,6 +211,33 @@
                 <img src="./assets/images/image-5.png" alt="image-5"> <br>
                 <img src="./assets/images/hashtable.png" alt="hashtable">
             </ul>
+        </section>
+        <section>
+            <p>Define</p>
+            <ul>
+                <li>If -</li>
+                <li>else -</li>
+                <li>for loops -</li>
+                <li>while loops -</li>
+                <li>Mathematical Operations -</li>
+                <li>Comparison Operations -</li>
+                <li>Exception Handling - </li>
+                <li>Increment Operators – </li>
+            </ul>
+        </section>
+        <section>
+            <p>Computer Science Concepts</p>
+            <ul>
+                <li>Algorithms - We will learn about algorithms and how to gauge their performance</li>
+                <li>Data Structures - We will learn about data structures and how they are implemented in JavaScript.</li>
+            </ul>
+            <p>Big O Notation</p>
+            <ul>
+                <li>Big O notation helps us describe how runtime will scale when we increase input size (n).</li>
+                <li>It is denoted with a capital O alongside the growth factor (in parentheses)</li>
+                <li>Example: The time complexity of simple search is O(n)</li>
+            </ul>
+        
         </section>
     </main>
         <footer>
