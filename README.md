@@ -2,7 +2,9 @@
 
 ## Screenshot
 
-![bootcampPSG](https://user-images.githubusercontent.com/109435666/236710280-5c7f6a0a-d6de-4733-aadc-25747c018d60.png)
+![Screenshot 2023-05-13 134523](https://github.com/oliverLo78/prework-study-guide/assets/109435666/80d31e26-e8d6-4c7e-90ad-2a111ec56619)
+
+![Screenshot 2023-05-13 134537](https://github.com/oliverLo78/prework-study-guide/assets/109435666/c159b70c-41ee-4e40-8717-2348ac42bedf)
 
 
 A study guide for course pre-work
