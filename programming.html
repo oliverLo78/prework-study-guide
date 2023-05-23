@@ -37,13 +37,28 @@
                     }; <br>
                   };</p>
             <ul class="card">
-                <li>Getters & Setters - The get method returns the variable value, and the set method sets the value.
-                Syntax for both is that they start with either get or set, followed by the name of the variable, with the first letter in upper case:</li>
-                    <p class="item"> // Set the value of the name variable to "John" <br>
-                    System.out.println(myObj.getName()); <br>
-                        } 
-                    }
-                // Outputs "John";</p>
+                <li>Getters: The get syntax binds an object property to a function that will be called when that property is looked up</li>
+                    <p class="item">const obj = {  <br>
+                        log: ['a', 'b', 'c'],<br>
+                        get latest() { <br> 
+                            return this.log[this.log.length - 1]; <br>
+                        } <br>
+
+                    }; <br>
+                    
+                    console.log(obj.latest); // Expected output: 'c'</p>
+                <li>Setters: The set syntax binds an object property to a function to be called when there is an attempt to set that property</li>
+                    <p class="item">const language = { <br>
+                        set current(name) { <br>
+                            this.log.push(name); <br>
+                        }, <br>
+                        log: [] <br>
+                    }; <br>
+                    <br> 
+                    language.current = 'EN'; <br>
+                    language.current = 'FA'; <br>
+                    <br>
+                    console.log(language.log); // Expected output: Array['EN', 'FA']</p>
                 <li>Access Control -  controls the access level; Non-Access Modifiers - do not control access level, but provides other functionality</li>
                
                 <li>Access Modifiers - Properties and methods can have access modifiers which control where they can be accessed.
@@ -59,30 +74,27 @@
         <section>
             <p>2. Inheritance - the ability of creating a new class from an existing class. Inheritance is when an object acquires the property of another object. Inheritance allows a class (subclass) to acquire the properties and behavior of another class (super-class). It helps to reuse, customize and enhance the existing code.</p>
             <ul class="card">
-                <li>Hierarchical inheritance - </li>
-                <li>Parent Class vs. Child Class -Create a class named "Model" which will inherit the methods from the "Car" class, by using the extends keyword. By calling the super() method in the constructor method, we call the parent's constructor method and gets access to the parent's properties and method </li>
-                <p class="item">abstract class Product { <br>
-                    int multiplyBy; <br>
-                    public Product( int multiplyBy ) { <br>
-                        this.multiplyBy = multiplyBy; <br>
-                    }
-                    <br>
-                    public int mutiply(int val) { <br>
-                       return multiplyBy * val; <br>
-                    } <br>
-                } <br>
-                    <br>
-                class TimesTwo extends Product { <br>
-                    public TimesTwo() { <br>
-                        super(2); <br>
-                    } <br>
-                } <br>
+                <li>Hierarchical inheritance - JavaScript objects have a link to a prototype object.  In an object literal like { a: 1, b: 2, __proto__: c }, the value c (which has to be either null or another object) will become the [[Prototype]] of the object represented by the literal, while the other keys like a and b will become the own properties of the object.</li>
                 
-                class TimesWhat extends Product {
-                    public TimesWhat(int what) {
-                        super(what);
-                    }
-                }</p>
+                <li>Parent Class vs. Child Class -Create a class named "Model" which will inherit the methods from the "Car" class, by using the extends keyword. By calling the super() method in the constructor method, we call the parent's constructor method and gets access to the parent's properties and method </li>
+                <p class="item">
+                    class Car {<br>
+                        constructor(brand);<br>
+                            this.carname = brand;
+                        } <br>
+                        present() {<br>
+                            return 'I have a ' + this.carname;<br>
+                        } <br>
+                    }<br>
+                    class Model extends Car {<br>
+                        constructor(brand, mod) {<br>
+                            super(brand); <br>
+                            this.model = mod; <br>
+                         } <br>
+                        show() {<br>
+                            return this.present() + ', it is a ' + this.model; <br>
+                        } <br>
+                    } <br></p>
             </ul>
         </section>
 
@@ -215,17 +227,45 @@
         <section>
             <p>Define</p>
             <ul>
-                <li>If -</li>
-                <li>else -</li>
-                <li>for loops -</li>
+                <li>If - the most common type of conditional statement if...else </li>
+                <li>else - Basic if...else syntax looks like this: if (condition) {</li>
+                    <li>/* code to run if condition is true */</li>
+                    <li> } else { </li>
+                        <li>/* run some other code instead */</li>
+                <p>for loops -We use a for loop to execute code more than once</p>
+                    <li>var studentNames = ['Jack', 'John', 'Craig', 'Roman'];</li>
+                    <li>for (var i = 0; i < studentNames.length; i++)</li>
+                    <li>console.log(studentNames[i])</li>
                 <li>while loops -</li>
-                <li>Mathematical Operations -</li>
-                <li>Comparison Operations -</li>
-                <li>Exception Handling - </li>
-                <li>Increment Operators – </li>
+                <p>Mathematical Operations - Arithmetic operators combine with numbers to form an expression that returns a single number</p>
+                    <li>var a = 100;</li>
+                    <li>var b = 10;</li>
+                    <li>var c = '10'</li>
+                    <li>var myName; // undefined</li>
+                    <li>console.log(a + b); // 100</li>
+                    <li>console.log(a - b); // 90</li>
+                    <li>console.log(a / b); // 10</li>
+                    <li>console.log(a * b); // 1000</li><br>
+                    <li>// Modulus return the remainder between two numbers</li>
+                    <li>console.log(a % b); // 0</li>
+                <p>Comparison Operations -</p>
+                    <li>Equal( == ) Returns true if the operands are equal var1 == 3 var1 == '3' 3 == '3'</li>
+                    <li>Not equal (!= ) Returns true if the operands are equal and of the same type. var1 != 4</li>
+                    <li>Strict equal ( === ) Returns true if the operands are equal and of the same type var1 === 3</li>
+                    <li>Strict not equal ( !== ) Returns true if the operands are of the same type but not equal, or are of different type var1 !== '3'</li>
+                <li>Exception Handling - The try statement allows you to define a block of code to be tested for errors while it is being executed.
+                    The catch statement allows you to define a block of code to be executed, if an error occurs in the try block.</li>
+                    <li>try { <br>
+                        Block of code to try <br>
+                      } <br>
+                      catch(err) { <br>
+                        Block of code to handle errors <br>
+                      }</li>
+                <li>Increment Operators – The increment (++) operator increments (adds one to) its operand and returns the value before or after the increment, depending on where the operator is placed.</li>
+                <li>x++</li>
+                <li>++x</li>
+                    
             </ul>
-        </section>
-        <section>
             <p>Computer Science Concepts</p>
             <ul>
                 <li>Algorithms - We will learn about algorithms and how to gauge their performance</li>
@@ -236,6 +276,12 @@
                 <li>Big O notation helps us describe how runtime will scale when we increase input size (n).</li>
                 <li>It is denoted with a capital O alongside the growth factor (in parentheses)</li>
                 <li>Example: The time complexity of simple search is O(n)</li>
+                <li>Constant Time</li>
+                <img src="./assets/images/Screenshot_Constant_Time.png" alt="">
+                <li>Linear Time</li>
+                <img src="./assets/images/Screenshot_Linear_Time.png" alt="">
+                <li>Quadratic Time</li>
+                <img src="./assets/images/Screenshot_Quadratic_Time.png" alt="">
             </ul>
         
         </section>
