@@ -26,32 +26,32 @@
                 Class. It provides security to data members by making the variable private, and then 
                 creating public getter/setter methods to access those variables.</p>
                 <p>const OverloadDemo = function () { <br>
-                    this.area = function (x, y) { <br>
-                      console.log('x = ', x); <br>
-                      if (!y) { <br>
-                        console.log('y is not provided'); <br>
-                        return `\nThe area of the square is ${Math.pow(x, 2)} sq units`; <br>
-                      }
+                    <strong class="tab">this.area = function (x, y) { <br>
+                    <strong class="tab">console.log('x = ', x); <br>
+                            if (!y) { <br>
+                                <strong class="tab">console.log('y is not provided'); <br>
+                                <strong class="tab">return `\nThe area of the square is ${Math.pow(x, 2)} sq units`; <br>
+                    <strong class="tab">} <br>
                       console.log('y = ', y); <br>
                       return `\nThe area of the rectangle is ${x * y} sq units`; <br>
-                    }; <br>
+                      <strong class="tab">}; <br>
                   };</p>
             <ul class="card">
                 <li>Getters: The get syntax binds an object property to a function that will be called when that property is looked up</li>
                     <p class="item">const obj = {  <br>
                         log: ['a', 'b', 'c'],<br>
                         get latest() { <br> 
-                            return this.log[this.log.length - 1]; <br>
-                        } <br>
+                            <strong class="tab">return this.log[this.log.length - 1]; <br>
+                            <strong class="tab">} <br>
 
                     }; <br>
                     
                     console.log(obj.latest); // Expected output: 'c'</p>
                 <li>Setters: The set syntax binds an object property to a function to be called when there is an attempt to set that property</li>
                     <p class="item">const language = { <br>
-                        set current(name) { <br>
-                            this.log.push(name); <br>
-                        }, <br>
+                        <strong class="tab">set current(name) { <br>
+                            <strong class="tab">this.log.push(name); <br>
+                            <strong class="tab">}, <br>
                         log: [] <br>
                     }; <br>
                     <br> 
@@ -78,22 +78,22 @@
                 
                 <li>Parent Class vs. Child Class -Create a class named "Model" which will inherit the methods from the "Car" class, by using the extends keyword. By calling the super() method in the constructor method, we call the parent's constructor method and gets access to the parent's properties and method </li>
                 <p class="item">
-                    class Car {<br>
-                        constructor(brand);<br>
-                            this.carname = brand;
+                    <strong class="tab">class Car {<br>
+                        <strong class="tab">constructor(brand);<br>
+                            <strong class="tab">this.carname = brand;
                         } <br>
                         present() {<br>
                             return 'I have a ' + this.carname;<br>
-                        } <br>
+                            <strong class="tab">} <br>
                     }<br>
                     class Model extends Car {<br>
-                        constructor(brand, mod) {<br>
-                            super(brand); <br>
-                            this.model = mod; <br>
-                         } <br>
+                        <strong class="tab">constructor(brand, mod) {<br>
+                            <strong class="tab">super(brand); <br>
+                                <strong class="tab">this.model = mod; <br>
+                                    <strong class="tab">} <br>
                         show() {<br>
-                            return this.present() + ', it is a ' + this.model; <br>
-                        } <br>
+                            <strong class="tab">return this.present() + ', it is a ' + this.model; <br>
+                                <strong class="tab">} <br>
                     } <br></p>
             </ul>
         </section>
@@ -108,18 +108,19 @@
                 <li>Default Constructors - If the programmer does not supply a constructor for an instantiable class, Java compiler inserts a default constructor into your code on your behalf.</li> 
                     <p class="item">// Create a constructor function called 'Developer' that takes in 'name' and 'tech' <br>
                         function Developer(name, tech) { <br>
-                            this.name = name; <br>
-                            this.tech = tech;
+                            <strong class="tab">this.name = name; <br>
+                            <strong class="tab">this.tech = tech; <br>
                             // Include a method called 'introduction()' that introduces the Developer with their name and favorite tech <br>
                             this.introduction = () => { <br>
                                 console.log(`Hi, my name is ${this.name} and I love ${this.tech}!`); <br>
-                            }; <br>
-                        }
+                            <strong class="tab">}; <br>
+                        } <br>
+                        <br>
                         // Create a new object using the 'Developer' constructor <br>
                         const oliver = new Developer('Oliver', 'OOP'); <br>
                         const norberto = new Developer('Norberto', 'Javascript'); <br>
                         const osiris = new Developer('Osiris', 'Python'); <br>
-                        
+                        <br>
                         // Call the 'introduction()' method on the new object <br>
                         oliver.introduction(); <br>
                         norberto.introduction(); <br>
@@ -135,17 +136,17 @@
                 <img src="./assets/images/Method_Overriding.jpg" alt="class vehicle model u-shape line connecting class car box">
                 <li>Method Overloading -  is a form of polymorphism in OOP. Polymorphism allows objects or methods to act in different ways, according to the means in which they are used. </li>
                     <p class="tab">const MethodOverloading = function () { <br>
-                        this.area = function (side1, side2, side3) { <br>
-                        console.log('side1 = ', side1); <br>
-                        console.log('side2 = ', side2); <br>
+                        <strong class="tab">this.area = function (side1, side2, side3) { <br>
+                        <strong class="tab">console.log('side1 = ', side1); <br>
+                        <strong class="tab">console.log('side2 = ', side2); <br>
                         if (!side3) { <br>
-                          console.log('side3 of the triangle is not provided'); <br>
+                        <strong class="tab">console.log('side3 of the triangle is not provided'); <br>
                           return `\nThe area of the triangle is ${Math.sqrt(side1*side1 + side2*side2)} sq units`; <br>
-                        } <br>
+                         } <br>
                         const s = (side1 + side2 + side3) / 2; <br>
-                        console.log('s = ', s); <br>
+                        <strong class="tab">console.log('s = ', s); <br>
                         return `\nThe area of the triangle is ${ Math.sqrt(s * (s - side1) * (s - side2) * (s - side3))}sq units`; <br>
-                      <p class="tab">}; </p> <br>
+                      <strong class="tab">}; <br>
                     };</p>
                 
                 
